@@ -53,10 +53,10 @@ class MyApp extends StatelessWidget {
           children: [
             Container(
               margin: EdgeInsets.all(10),
-              color : Colors.black,
+              color :Colors . pink ,
           height: 100,
           width: 100,
-            ),
+            ),-
             Container(
                margin: EdgeInsets.all(10),
               color : Colors.amber,
