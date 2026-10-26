@@ -4,9 +4,14 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-
+class MyApp extends StatefulWidget {
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool isPasswordHidden = true;
+
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -43,6 +48,7 @@ class MyApp extends StatelessWidget {
                  TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
+                  
                     prefixIcon: Icon(Icons.email),
                     filled: true,
                     fillColor: Colors.white,
@@ -53,11 +59,24 @@ class MyApp extends StatelessWidget {
                   height: 20,
                  ),
                   TextField(
-                    obscureText: true,
+                    obscureText: isPasswordHidden,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     prefixIcon: Icon(Icons.password),
-                    filled: true,
+                    
+                    suffixIcon: IconButton(
+                          icon: Icon(
+                         isPasswordHidden ? Icons.visibility_off : Icons.visibility,
+                          ),
+                         onPressed: () {
+                         setState(() {
+                            isPasswordHidden = !isPasswordHidden;
+                            });
+                             },
+                           
+                        ),
+
+                  filled: true,
                     fillColor: Colors.white,
                     hintText: "enter your password",
                   ),
