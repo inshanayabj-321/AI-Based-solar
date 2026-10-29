@@ -24,41 +24,26 @@ home: Scaffold(
   appBar: AppBar(
     title: Text("BS IT"),
   ),
-    body: Column(
+    body: ListView(
       children: [
-         
-
-        TextField(
-                     
-          controller:passwordController ,
-         obscureText: showPassword,
-          decoration: InputDecoration(
-            hintText: AutofillHints.password,
-            border: OutlineInputBorder(),
-            prefixIcon: Icon(Icons.password),
-            suffixIcon: IconButton(
-              onPressed: (){
-                setState(() {
-                  showPassword =! showPassword;
-                });
-                print(passwordController.text);
-              print("hello world");
-              
-            },
-             icon:Icon(Icons.remove_red_eye),
-             ),
+        ListTile(
+          leading: CircleAvatar(
+            child: Icon( Icons.person),
           ),
-        ),
-                  
-ElevatedButton(
-                  onPressed: () {
-                    print(passwordController.text);
-                  print("Login button clicked");
-                 },
-               child: Text("Login"),
-             ),
+          title: Text("insha"),
+          subtitle: Text("hy"),
+          trailing: Icon(Icons.arrow_forward),
+          ),
+         ListTile(title: Text("mehak"),),
+          ListTile(title: Text("maryam"),),
+           ListTile(title: Text("rabia"),),
+            ListTile(title: Text("ayesha"),),
+             ListTile(title: Text("fatima"),),
+              ListTile(title: Text("zahra"),),
+
       ],
     )
+
         
 
   ),
