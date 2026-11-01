@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   final passwordController = TextEditingController();
 
   List<String> students = [
-    "papa g", "mama", "MARYAM", "AYESHA",
+    "papa g", "mama", "mARYAM", "AYESHA",
     "MEHAK", "INSHA", "zahra", "muskan",
     "nida", "mehrab", "zainab",
   ];
